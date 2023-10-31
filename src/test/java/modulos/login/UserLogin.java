@@ -43,8 +43,10 @@ public class UserLogin {
                 .clicarSignup();
 
         new Conta(navegador)
-                .novoCadastroUsuario("1234567890", "Bruno","Aurelio","Bruno Aurelio SA","Rua das Trevas","Ao lado da árvore",
-                        "SP","Araraquara","14811-220","16-998565258");
+                .novoCadastroUsuario("1234567890", "Bruno","Aurelio","Bruno Aurelio QA SA",
+                        "Rua das Oliveiras","Ao lado de casa",
+                        "SP","Araraquara","14811-220","16-998565258","20",
+                "April","1989");
 
     }
 

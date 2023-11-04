@@ -38,7 +38,7 @@ public class UserLoginCadastrado {
                 .clicarLogout();
     }
     @Test
-    @DisplayName("Caso de Teste 3 - Deleta usuário")
+    @DisplayName("Caso de Teste 3 - Deletar usuário")
     public void testDeletaUsuarioCadastrado(){
         new LoginPage(navegador)
                 .informaUsuarioExistente("bruno.aurelio@gmail.com", "1234567890")

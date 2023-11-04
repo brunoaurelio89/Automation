@@ -15,7 +15,5 @@ O próprio site propõe casos de testes para serem feitos e o código de automa�
 **Test Cases**
 1. Registro de um novo usuário
 2. Login utilizando credenciais corretas
-3. Login utilizando credenciais incorretas
-4. Logoff Usuário
-5. Registrar novo usuário com credenciais já existentes
-6. Formulário de Contato
+3. Logoff Usuário
+4. Formulário de Contato

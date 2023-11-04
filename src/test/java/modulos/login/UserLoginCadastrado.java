@@ -1,20 +1,15 @@
 package modulos.login;
 
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import paginas.CadastroUsuario;
-import paginas.Conta;
 import paginas.LoginPage;
 
-@DisplayName("Acessar página de login e criar um novo usuário")
-public class UserLogin {
+@DisplayName("Acessar Página de Login e Acessar Conta")
+public class UserLoginCadastrado {
 
     /*Atributo para utilização sempre do navegador*/
     private WebDriver navegador;
@@ -35,29 +30,23 @@ public class UserLogin {
     }
 
     @Test
-    @DisplayName("Caso de Teste 1 - Registro de um novo usuário ")
-    public void testRealizarLogin (){
-
+    @DisplayName("Caso de Teste 2 - Login utilizando credenciais corretas")
+    public void testLoginUsuarioCadastrado(){
         new LoginPage(navegador)
-                .informaUsuarioNovo("Bruno","bruno.aurelio@gmail.com")
-                .clicarSignup();
-
-        new Conta(navegador)
-                .novoCadastroUsuario("1234567890", "Bruno","Aurelio","Bruno Aurelio QA SA",
-                        "Rua das Oliveiras","Ao lado de casa",
-                        "SP","Araraquara","14811-220","16-998565258","20",
-                "April","1989");
-
+                .informaUsuarioExistente("bruno.aurelio@gmail.com", "1234567890")
+                .clicarLogin()
+                .clicarLogout();
     }
-
-    @AfterEach
-    public void afterEach(){
-        /*fecha o navegador no final da execução*/
-        this.navegador.quit();
+    @Test
+    @DisplayName("Caso de Teste 3 - Deleta usuário")
+    public void testDeletaUsuarioCadastrado(){
+        new LoginPage(navegador)
+                .informaUsuarioExistente("bruno.aurelio@gmail.com", "1234567890")
+                .clicarLogin()
+                .clicarDeletarConta();
+        /*IMPLEMENTAR:
+        * 01 - Verificar se a mensagem de account deleted está correta
+        * 02 - Clicar no botão Continue
+        * 03 - Levar para a página inicial*/
     }
-
-
-
-
 }
-

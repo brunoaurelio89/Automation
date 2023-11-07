@@ -1,5 +1,6 @@
 package modulos.FormularioContato;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -30,8 +31,13 @@ public class Infos {
     public void infosFormContato(){
         new FormularioContato(navegador)
                 .testPreencheFormularioContato("Bruno Aurelio", "bruno.aurelio@gmail.com", "Acompanhamento do pedido 85698",
-                        "Quero saber mais informações do pedido 85698 que foi efetuado e não foi informado um prazo de entrega");
+                        "Quero saber mais informações do pedido 85698 que foi efetuado e não foi informado um prazo de entrega",
+                        "C:\\Users\\bruno\\IdeaProjects\\Automation\\src\\main\\resources\\Imagens\\Screenshot_10.png");
+    }
 
-
+    @AfterEach
+    public void afterEach(){
+        /*fecha o navegador no final da execução*/
+        this.navegador.quit();
     }
 }

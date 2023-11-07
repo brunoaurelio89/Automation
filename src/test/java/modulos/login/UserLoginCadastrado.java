@@ -44,9 +44,5 @@ public class UserLoginCadastrado {
                 .informaUsuarioExistente("bruno.aurelio@gmail.com", "1234567890")
                 .clicarLogin()
                 .clicarDeletarConta();
-        /*IMPLEMENTAR:
-        * 01 - Verificar se a mensagem de account deleted está correta
-        * 02 - Clicar no botão Continue
-        * 03 - Levar para a página inicial*/
     }
 }

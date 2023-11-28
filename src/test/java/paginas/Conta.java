@@ -54,7 +54,8 @@ public class Conta {
 //        navegador.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
         /*Fecha o ad que aparece na tela*/
-        navegador.findElement(By.cssSelector("div[id='report-button']")).click();
+        /*COMENTADO A LINHA PORQUE FOI ALTERADO O AD DA PÁGINA COM ISSO NÃO TEM MAIS O AD TER QUE FECHAR*/
+        // navegador.findElement(By.cssSelector("div[id='report-button']")).click();
         //navegador.findElement(By.cssSelector("div[id='dismiss-button']")).click();
 
         return new CadastroUsuario(navegador);

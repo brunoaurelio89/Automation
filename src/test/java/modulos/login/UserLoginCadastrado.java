@@ -26,7 +26,7 @@ public class UserLoginCadastrado {
 
         // Abrir o navegador, maximizar a tela e acessa o site Automation
         this.navegador.manage().window().maximize();
-        this.navegador.get("https://automationexercise.com/");
+        this.navegador.get("http://automationexercise.com/");
     }
 
     @Test
